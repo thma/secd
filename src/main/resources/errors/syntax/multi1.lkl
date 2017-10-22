@@ -1,0 +1,5 @@
+(LETREC (LAMBDA (X))
+  (FUN LAMBDA (A.B)
+    (QUOTE A B)
+  )
+)

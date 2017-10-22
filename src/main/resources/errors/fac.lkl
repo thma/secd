@@ -1,0 +1,8 @@
+(LETREC FAC
+  (FAC LAMBDA (X)
+    (IF (EQ (QUOTE 0))
+        (QUOTE 1 1)
+        (MUL X (FAC (SUB (QUOTE 1))))
+    )
+  )
+)

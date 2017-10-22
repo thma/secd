@@ -1,0 +1,11 @@
+(LETREC TAKE
+  (TAKE LAMBDA (X Y Z)
+    (IF (LEQ X Y)
+      Z
+      (TAKE (TAKE (SUB X (QUOTE 1)) Y Z)
+            (TAKE (SUB Y (QUOTE 1)) Z X)
+            (TAKE (SUB Z (QUOTE 1)) X Y)
+      )
+    )
+  )
+)

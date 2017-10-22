@@ -1,0 +1,4 @@
+(LAMBDA (A B)
+  (IF (EQ A B)
+  )
+)

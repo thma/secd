@@ -1,0 +1,10 @@
+(LET INC
+  (INC LAMBDA (A A)
+    (LET (ADD A ONE)
+      (ONE . (QUOTE 1))
+    )
+  )
+  (INC LAMBDA (A A)
+    (ADD A (QUOTE 1))
+  )
+)

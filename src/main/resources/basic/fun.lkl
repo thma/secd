@@ -1,0 +1,5 @@
+(LETREC AAA
+  (AAA LAMBDA (X)
+    ( (LAMBDA (A) (ADD A (QUOTE 1))) X )
+  )
+)

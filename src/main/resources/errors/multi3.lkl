@@ -1,0 +1,7 @@
+(LETREC XX
+  (X LAMBDA (Y Y)
+    (ADD Z W)
+  )
+  (X X)
+  (X X)
+)

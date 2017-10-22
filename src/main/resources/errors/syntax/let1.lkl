@@ -1,0 +1,7 @@
+(LET INCC
+  (INC LAMBDA (A)
+    (LET (ADD A ONE)
+      (ONE . (QUOTE 1))
+    )
+  )
+)

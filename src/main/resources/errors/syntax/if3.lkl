@@ -1,0 +1,5 @@
+(LAMBDA (A B)
+  (IF (EQ A B)
+      (QUOTE (ARGUMENTS ARE EQUAL))
+  )
+)

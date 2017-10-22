@@ -1,0 +1,5 @@
+(LET (INC.1)
+  (INC LAMBDA (A)
+    (ADD A (QUOTE 1))
+  )
+)
