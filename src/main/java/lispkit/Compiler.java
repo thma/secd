@@ -17,6 +17,8 @@ import lispkit.sexp.*;
 /*
  * Class Compiler implements the compiler from LispKit LISP to
  * SECD machine code.
+ * This compiler is only needed to do the first bootrapping of the Lispkit compiler written in Lispkit itself.
+ * (See file compile.lkl).
  */
 class Compiler {
 

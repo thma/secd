@@ -9,12 +9,10 @@
 
 package lispkit.secd;
 
-import lispkit.sexp.*;
-
 public class STOPInstruction implements Instruction {
 
-  public void execute(State state) throws STOPException {
-    throw new STOPException();
+  public void execute(State state) {
+    //NOOP
   }
 
 }
