@@ -25,6 +25,8 @@ public class LTest {
         return Parser.parse(input);
     }
 
+
+
     @Test
     public void bootstrapTheCompilerShouldWork() {
         SExp compilerSourceCode = parseFromFile("compile.lkl");
@@ -35,9 +37,18 @@ public class LTest {
     }
 
 
+    /**
+     * Compiles the Compiler from source and returns the emitted SECD code.
+     * @return the compiled compiler.
+     */
+    private SExp bootsTrapCompiler() {
+        SExp compilerSourceCode = parseFromFile("compile.lkl");
+        return Compiler.compile(compilerSourceCode);
+    }
+
     @Test
     public void bootstrapMultipleTimesShouldWork() {
-        SExp initialCompiler = parseFromFile("compile.secd");
+        SExp initialCompiler = bootsTrapCompiler();
         SExp compilerSourceCode = new Cons(parseFromFile("compile.lkl"), NIL);
 
         long start = System.currentTimeMillis();
@@ -51,7 +62,7 @@ public class LTest {
 
     @Test
     public void compileAndRunFactorialShouldWork() throws SExpException {
-        SExp compiler = parseFromFile("compile.secd");
+        SExp compiler = bootsTrapCompiler();
         SExp sourceFactorial = new Cons(parseFromFile("fac.lkl"), NIL);
         SExp codeFactorial = Interpreter.exec(compiler, sourceFactorial);
         SExp result = Interpreter.exec(codeFactorial, parse("(10)"));
@@ -60,7 +71,7 @@ public class LTest {
 
     @Test
     public void compileAndRunTakeShouldWork() throws SExpException {
-        SExp compiler = parseFromFile("compile.secd");
+        SExp compiler = bootsTrapCompiler();
         SExp source = new Cons(parseFromFile("take.lkl"), NIL);
         SExp code = Interpreter.exec(compiler, source);
         SExp result = Interpreter.exec(code, parse("(18 12 6)"));
@@ -69,7 +80,7 @@ public class LTest {
 
     @Test
     public void compileAndRunFibShouldWork() throws SExpException {
-        SExp compiler = parseFromFile("compile.secd");
+        SExp compiler = bootsTrapCompiler();
         SExp source = new Cons(parseFromFile("fib.lkl"), NIL);
         SExp code = Interpreter.exec(compiler, source);
         SExp result = Interpreter.exec(code, parse("(10)"));
