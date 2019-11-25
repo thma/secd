@@ -11,6 +11,10 @@
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <sonar.projectKey>thma_secd</sonar.projectKey>
+        <sonar.organization>thma</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.login>bb0e22ff21d517ef2980d3bb2a53fad91fe83022</sonar.login>
     </properties>
 
     <dependencies>
